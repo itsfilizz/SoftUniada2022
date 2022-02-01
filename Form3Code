@@ -1,0 +1,148 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace oli
+{
+    public partial class Form3 : Form
+    {
+        public Form3()
+        {
+            InitializeComponent();
+        }
+        int sum = 0;
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 5;
+        }
+        private void RadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 20;
+        }
+
+        private void RadioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 10;
+        }
+
+        private void RadioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 10;
+        }
+
+        private void RadioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 0;
+        }
+        private void RadioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 5;
+        }
+        private void RadioButton7_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 15;
+        }
+        private void RadioButton8_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 10;
+        }
+        private void RadioButton9_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 0;
+        }
+        private void RadioButton10_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 0;
+        }
+        private void RadioButton11_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 5;
+        }
+        private void RadioButton12_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 10;
+        }
+        private void RadioButton13_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 10;
+        }
+        private void RadioButton14_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 5;
+        }
+        private void RadioButton15_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 0;
+        }
+        private void RadioButton16_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 10;
+        }
+        private void RadioButton17_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 0;
+        }
+        private void RadioButton18_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 10;
+        }
+        private void RadioButton19_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 0;
+        }
+        private void RadioButton20_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 10;
+        }
+        private void RadioButton21_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 10;
+        }
+        private void RadioButton22_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 15;
+        }
+        private void RadioButton23_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 0;
+        }
+        private void RadioButton24_CheckedChanged(object sender, EventArgs e)
+        {
+            sum += 5;
+        }
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            if (sum >= 0 && sum <= 30)
+            {
+                string text = "Несериозен спестовник";
+                string text2 = "Благодарим ви за усилията, които полагате. Но, както вероятно ще се съгласите, при вас има още много да се желае. Опитайте се да следвяте нашите съвети, за да станете по-добър спестовник.";
+                MessageBox.Show(text2, text);
+            }
+            if(sum > 30 && sum < 60)
+            {
+                string text = "Среден спестовник";
+                string text2 = "Много добре. Очевидно съзнавате, че пестенето на водата е важно и вече сте започнали да ставате сериозен спестовник. Полезните ни съвети ще ви помогнат да пестите още по-добре.";
+                MessageBox.Show(text2, text);
+            }
+            if (sum >= 60)
+            {
+                string text = "Добър спестовник";
+                string text2 = "Поздравления! Справяте се чудесно с пестенето на водата. Дайте полезни съвети на роднини и приятели, за да станат добри спестовници като вас.";
+                MessageBox.Show(text2, text);
+            }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2 secondForm = new Form2();
+            secondForm.Show();
+        }
+    }
+}
