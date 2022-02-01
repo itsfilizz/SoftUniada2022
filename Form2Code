@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace oli
+{
+    public partial class Form2 : Form
+    {
+        public Form2()
+        {
+            InitializeComponent();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form3 thirdForm = new Form3();
+            thirdForm.Show();
+        }
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form4 fourthForm = new Form4();
+            fourthForm.Show();
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form5 fifthForm = new Form5();
+            fifthForm.Show();
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            string text = "Нека бъдем по-отговорни, защото животът на нашата планета Земя зависи от нас самите!";
+            string caption = "Warning!";
+            var result =  MessageBox.Show(text,caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
+    }
+}
